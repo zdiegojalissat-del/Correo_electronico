@@ -1,0 +1,19 @@
+document.getElementById("formulario")
+.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  let correo = document.getElementById("correo").value;
+  let mensaje = document.getElementById("mensaje");
+
+  if (correo.includes("@") && correo.includes(".")) {
+
+    mensaje.textContent = "Suscripción realizada correctamente";
+    mensaje.style.color = "green";
+
+  } else {
+
+    mensaje.textContent = "Correo electrónico inválido";
+    mensaje.style.color = "red";
+  }
+});
